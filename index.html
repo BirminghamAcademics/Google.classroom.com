@@ -1,3 +1,64 @@
-<title>Google Classroom</title>
-<h>DO NOT CLICK ANYTHING BESIDE THE X BUTTON AFTER THE TIME IS DONE OR ELSE THE WHOLE WEBSITE WILL BE BLOCKED</h>
-<object data="https://v2202502253988313268.nicesrv.de/" type="text/html" width="100%" height="100%"></object>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Arcade</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .school-campus {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .school-resource {
+            background: #222;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .school-resource:hover {
+            transform: scale(1.05);
+        }
+        .school-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .school-subject {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>School Arcade</h1>
+  
+    <div class="school-campus">
+        <a href="https://birminghamacademics.github.io/Google.classroom.com/Classes/1/Index.html" class="school-resource">
+            <img src="Classes/1/CLASS1.PNG" alt="Class 1" class="school-image">
+            <div class="school-subject">Class 1</div>
+        </a>
+        <a href="https://example.com/class2" class="school-resource">
+            <img src="class2.png" alt="class2 2" class="school-image">
+            <div class="school-subject">WORKING ON</div>
+        </a>
+       
+    </div>
+
+</body>
+</html>
