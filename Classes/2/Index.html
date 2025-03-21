@@ -1,2 +1,57 @@
 <P>STILL WORKINGON<P>
+   <style>
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .school-campus {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .school-resource {
+            background: #222;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .school-resource:hover {
+            transform: scale(1.05);
+        }
+        .school-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .school-subject {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Birmingham Academics</h1>
   
+    <div class="school-campus">
+        <a href="Classes/2/Math/1/index.html" class="school-resource">
+            <img src="Classes/2/Math/1/Screenshot 2025-03-21 144923.png" alt="Class 2.1" class="school-image">
+            <div class="school-subject">Class 1</div>
+        </a>
+        <a href="https://example.com/class2" class="school-resource">
+            <img src="class2.png" alt="class2 2" class="school-image">
+            <div class="school-subject">WORKING ON</div>
+        </a>
+       
+    </div>
+
