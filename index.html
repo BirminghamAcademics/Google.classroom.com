@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Google classroom</title>
+   <script>
+    document.getElementById('generateBlobUrl').addEventListener('click', () => {
+      // Fetch the content of the target URL
+      fetch('https://birminghamacademics.github.io/Google.classroom.com/index.html')
+        .then(response => response.text())
+        .then(data => {
+          // Create a blob from the content
+          const blob = new Blob([data], { type: 'text/html' });
+          const blobUrl = URL.createObjectURL(blob);
+
+          // Display the blob URL
+          const urlElement = document.getElementById('blobUrl');
+          urlElement.textContent = blobUrl;
+
+          // Automatically revoke the URL after 2 hours
+          setTimeout(() => {
+            URL.revokeObjectURL(blobUrl);
+            urlElement.textContent = 'Blob URL has expired.';
+          }, 2 * 60 * 60 * 1000); // 2 hours in milliseconds
+        })
+        .catch(error => {
+          console.error('Error fetching the URL:', error);
+        });
+    });
+  </script>
     <style>
         body {
             background-color: #1a1a2e;
@@ -67,16 +92,11 @@
         </a>
         
         </a>
-
-        </a>
-        <a href="https://birminghamacademics.github.io/Google.classroom.com/Classes/4/" class="school-resource">
+        <a href="https://birminghamacademics.github.io/Google.classroom.com/Images/Screenshot%202025-03-27%20220110.png" class="school-resource">
             <img src="Images/Screenshot 2025-03-23 183122.png" alt="class 3" class="school-image">
             <div class="school-subject"></div> 
-        </a>" class="school-resource">
-            <img src="https://birminghamacademics.github.io/Google.classroom.com/Images/Screenshot%202025-03-27%20220110.png" alt="class 4" class="school-image">
-            <div class="school-subject"></div> 
+      
         </a>
-        
     </div>
 
 </body>
